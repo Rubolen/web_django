@@ -17,32 +17,10 @@
 
 <h2>Ваш счет: {{score}}/10 </h2>
 
-
-
-
-
-<!--<button type="button" class="btn btn-dark" name="button1" id="s_button" onclick="window.open('{% url 'question' %}')">-->
-<!--Следующий вопрос-->
-<!--</button>-->
-<!--<a href="/question" class="btn btn-dark">-->
-<!--    Следующий вопрос-->
-<!--</a>-->
-
-<!--<form action="/question" method="post">-->
-<!--   <button type="submit" class="btn btn-dark" name="button1">Следующий вопрос</button>-->
-<!--</form>-->
-
-<!--<form action="/question" method="post">-->
-<!--{% csrf_token %}-->
-<!--<button type="submit" class="btn btn-dark" name="button1">Следующий вопрос</button>-->
-<!--</form>-->
-
 <div>
         <form id = "question-form"  method="get" action="/question">
             <button type="submit" class="btn btn-dark" name="button1">Следующий вопрос</button>
         </form>
 </div>
-
-
 
 {% endblock %}

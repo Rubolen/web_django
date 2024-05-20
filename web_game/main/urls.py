@@ -12,8 +12,6 @@ urlpatterns = [
     path('question_flags', views.get_questions, {'is_flags': True}, name='question_flags'),
     path('answer', views.get_answer, name='answer'),
     path('answer_flags', views.get_answer, {'is_flags': True}, name='answer_flags'),
-    # path('about', views.about, name='about'),
-    # path('create', views.create, name='create'),
     path('finish', views.get_finish, name='finish')
 ]
 

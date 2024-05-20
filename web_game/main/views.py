@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect
 import random
-from .models import Task, CountriesList, Answers, QuizSessionInfo
+from .models import CountriesList, Answers, QuizSessionInfo
 from .forms import CountryQuiz
 
 
 def index(request):
-    tasks = Task.objects.order_by('id')
-    return render(request, 'main/index.html', {'title': 'Главная страница сайта', 'tasks': tasks})
+
+    return render(request, 'main/index.html', {'title': 'Главная страница сайта'})
 
 
 def about(request):
@@ -38,10 +38,6 @@ def get_questions(request, is_flags=False, is_start=False):
         if int(round['round_counter']) > 10:
             return get_finish(request)
     form = CountryQuiz(request.POST)
-    # if form.is_valid():
-    #     form.save()
-    #     return redirect('answer')
-    # context = {'question': question, 'form': form, 'round': round['round_counter']}
     if is_flags:
         if form.is_valid():
             form.save()
